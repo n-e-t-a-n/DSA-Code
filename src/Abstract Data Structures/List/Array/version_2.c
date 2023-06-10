@@ -117,7 +117,7 @@ int member(List l, int elem) {
 
     for (temp=0 ; temp<l->count && l->array[temp]!=elem ; temp++) {}
 
-    return temp<l->count;
+    return temp<l.count;
 }
 
 int locate(List l, int elem) {
