@@ -1,0 +1,35 @@
+A list Abstract Data Type (ADT) is a fundamental data structure that represents 
+an ordered collection of elements. It provides operations to manipulate the 
+elements in the list. 
+
+Here's a description of the list ADT along with 
+its necessary and auxiliary functions:
+
+
+
+List ADT:
+
+1. The list ADT represents a sequence of elements where each element has a 
+specific position or index.
+
+2. The elements in a list can be of any type (e.g., integers, strings, objects).
+
+3. The list maintains the order of elements as they are inserted.
+
+
+
+Functions:
+
+List initialize(); // Returns an empty list
+
+void insert(List* l, int elem); // Inserts element at the end of the list
+
+void destroy(List* l, int elem); // Deletes first instance of element in the list
+
+int member(List l, int elem); // Checks if element is in the list
+
+int locate(List l, int elem); // Returns position of element in the list
+
+int size(List l); // Returns the number of elements in the list
+
+void display(List l); // Displays the elements of the list
