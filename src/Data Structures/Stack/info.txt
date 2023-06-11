@@ -29,7 +29,9 @@ int top(Stack s); // Returns the top element of the stack
 
 int isEmpty(Stack s); // Returns 1 if the stack is empty, 0 otherwise
 
-int isFull(Stack s); // Returns 1 if the stack is full, 0 otherwise
+int isFull(Stack s); // Returns 1 if the stack is full, 0 otherwise [Array || Cursor]
+
+----- Optional -----
 
 int size(Stack s); // Returns the number of elements in the stack
 
