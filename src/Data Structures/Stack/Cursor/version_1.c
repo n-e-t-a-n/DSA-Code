@@ -7,7 +7,7 @@ cursor based singly-linked list inside of a virtual heap.
 
 #define MAX 0xFF
 
-typedef int Stack; // Definition of list
+typedef int Stack; // Definition of stack
 
 typedef struct {
     int data;
