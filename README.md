@@ -1,5 +1,5 @@
 # DSA-Code
-A repository for all my learnings in Data Structures and Algorithms
+A vault of my knowledge in Data Structures and Algorithms
 
 ## Background
 Since I'll be trying to tutor some acquaintances and friends for this subject, I thought it best to open up a public repository where I can store my code for specific data structures and algorithms. 
