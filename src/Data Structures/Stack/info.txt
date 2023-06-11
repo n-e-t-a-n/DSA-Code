@@ -31,6 +31,6 @@ int isEmpty(Stack s); // Returns 1 if the stack is empty, 0 otherwise
 
 int isFull(Stack s); // Returns 1 if the stack is full, 0 otherwise
 
-int size(List l); // Returns the number of elements in the stack
+int size(Stack s); // Returns the number of elements in the stack
 
-void display(List l); // Displays the elements of the stack (without traversal)
+void display(Stack s); // Displays the elements of the stack (without traversal)
