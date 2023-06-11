@@ -1,6 +1,6 @@
 /*
 List is an integer pointing to the first element of a list represented in a 
-cursor based array inside of a virtual heap. 
+cursor based singly-linked list inside of a virtual heap. 
 */
 
 #include <stdio.h>
