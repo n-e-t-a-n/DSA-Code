@@ -122,8 +122,7 @@ int size(Stack s) {
 }
 
 void display(Stack s) {
-    Stack buffer; // Auxilliary stack to store elements of the stack in reverse
-    initialize(&buffer);
+    Stack buffer = initialize(); // Auxilliary stack to store elements of the stack in reverse
 
     while (!isEmpty(s)) {
         push(&buffer, pop(&s)); // Push popped elements to the buffer stack
