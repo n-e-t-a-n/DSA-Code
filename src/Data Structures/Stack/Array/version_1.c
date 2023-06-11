@@ -51,6 +51,7 @@ int main() {
                 } else {
                     printf("%d has been popped off the stack.\n", pop(&stack));
                 }
+                break;
             case 3:
                 if (isEmpty(stack)) {
                     printf("There are no elements in the stack.\n");
