@@ -1,0 +1,36 @@
+A stack Abstract Data Type (ADT) is a linear data structure that follows the 
+Last-In-First-Out (LIFO) principle. It represents a collection of elements 
+where elements are added and removed from the same end called the top of 
+the stack. 
+
+Here's a description of the stack ADT along with 
+its necessary and auxiliary functions:
+
+
+Stack ADT:
+
+1. The stack ADT stores elements in a specific order based on the LIFO principle.
+
+2. Elements can only be added or removed from the top of the stack.
+
+3. The stack has a fixed size or can dynamically grow as needed.
+
+
+
+Functions:
+
+Stack initialize(); // Returns an empty stack
+
+void push(Stack* s, int elem); // Inserts element at the top of the stack
+
+int pop(Stack* s); // Deletes top element of stack and returns it
+
+int top(Stack s); // Returns the top element of the stack
+
+int isEmpty(Stack s); // Returns 1 if the stack is empty, 0 otherwise
+
+int isFull(Stack s); // Returns 1 if the stack is full, 0 otherwise
+
+int size(List l); // Returns the number of elements in the stack
+
+void display(List l); // Displays the elements of the stack (without traversal)
