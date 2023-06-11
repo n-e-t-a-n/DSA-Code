@@ -16,8 +16,7 @@ void push(Stack* s, int elem); // Inserts element at the top of the stack
 int pop(Stack* s); // Deletes top element of stack and returns it
 int top(Stack s); // Returns the top element of the stack
 int isEmpty(Stack s); // Returns 1 if the stack is empty, 0 otherwise
-int size(Stack* s); // Returns the number of elements in the stack
-void display(Stack* s); // Displays the elements of the stack (without traversal)
+void display(Stack s); // Displays the elements of the stack (without traversal)
 
 
 int main() {
@@ -30,7 +29,8 @@ int main() {
         printf("2. Pop\n");
         printf("3. Top\n");
         printf("4. IsEmpty\n");
-        printf("5. Exit\n");
+        printf("5. Display\n");
+        printf("6. Exit\n");
         printf("Enter your option: ");
         scanf("%d", &option);
 
@@ -46,6 +46,7 @@ int main() {
                 } else {
                     printf("%d has been popped off the stack.\n", pop(&stack));
                 }
+                break;
             case 3:
                 if (isEmpty(stack)) {
                     printf("There are no elements in the stack.\n");
@@ -57,13 +58,17 @@ int main() {
                 printf("The stack is%sempty.\n", isEmpty(stack) ? " " : " not ");
                 break;
             case 5:
+                printf("Elements of the stack: ");
+                display(stack);
+                break;
+            case 6:
                 printf("Exiting the program.\n");
                 break;
             default:
                 printf("Invalid option. Please try again.\n");
                 break;
         }
-    } while (option != 5);
+    } while (option != 6);
 
     return 0;
 }
@@ -106,4 +111,11 @@ int top(Stack s) {
 
 int isEmpty(Stack s) {
     return s==NULL;
+}
+
+void display(Stack s) {
+    if (s!=NULL) {
+        display(s->next);
+        printf("%d ", s->data);
+    }
 }
