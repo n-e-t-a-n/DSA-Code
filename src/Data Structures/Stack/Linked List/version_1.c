@@ -114,8 +114,14 @@ int isEmpty(Stack s) {
 }
 
 void display(Stack s) {
-    if (s!=NULL) {
-        display(s->next);
-        printf("%d ", s->data);
+    Stack buffer = initialize(); // Auxilliary stack to store elements of the stack in reverse
+
+    while (!isEmpty(s)) {
+        push(&buffer, pop(&s)); // Push popped elements to the buffer stack
+    }
+
+    while (!isEmpty(buffer)) {
+        printf("%d ", top(buffer));
+        push(&s, pop(&buffer)); // Push elements back to original stack
     }
 }

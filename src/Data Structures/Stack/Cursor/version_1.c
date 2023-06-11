@@ -150,9 +150,15 @@ int isFull(VHeap vh) {
 }
 
 void display(Stack s, VHeap vh) {
-    if (s!=-1) {
-        display(vh.VH_node[s].next, vh);
-        printf("%d ", vh.VH_node[s].data);
+    Stack buffer = initializeStack(); // Auxilliary stack to store elements of the stack in reverse
+
+    while (!isEmpty(s)) {
+        push(&buffer, pop(&s, &vh), &vh); // Push popped elements to the buffer stack
+    }
+
+    while (!isEmpty(buffer)) {
+        printf("%d ", top(buffer, vh));
+        push(&s, pop(&buffer, &vh), &vh); // Push elements back to original stack
     }
 }
 
