@@ -1,0 +1,40 @@
+A queue ADT (Abstract Data Type) represents a collection of elements arranged 
+in a specific order. It follows the FIFO (First-In-First-Out) principle, 
+where the element that has been in the queue for the longest time is 
+the first one to be removed.
+
+Here's a description of the queue ADT along with 
+its necessary and auxiliary functions:
+
+
+Queue ADT:
+
+1. The queue ADT stores elements in a specific order based on the FIFO principle.
+
+2. Elements can only be added to the rear of the queue.
+
+3. Elements can only be removed from the front of the queue.
+
+4. The queue has a fixed size or can dynamically grow as needed.
+
+
+
+Functions:
+
+Queue initialize(); // Returns an empty queue
+
+void enqueue(Queue* q, int elem); // Inserts element at the rear of the queue
+
+int dequeue(Queue* q); // Deletes the element at the front of the queue and returns it
+
+int front(Queue q); // Returns the front element of the queue
+
+int isEmpty(Queue q); // Returns 1 if the queue is empty, 0 otherwise
+
+int isFull(Queue q); // Returns 1 if the queue is full, 0 otherwise [Circular Array]
+
+----- Optional -----
+
+int size(Queue q); // Returns the number of elements in the queue
+
+void display(Queue q); // Displays the elements of the queue (without traversal)
