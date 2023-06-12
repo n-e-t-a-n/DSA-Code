@@ -1,5 +1,5 @@
 /*
-Set is a specific datatype representing a computer words
+Set is a specific datatype representing a computer word
 */
 
 #include <stdio.h>
