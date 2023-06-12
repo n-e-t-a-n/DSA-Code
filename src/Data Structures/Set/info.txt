@@ -1,0 +1,37 @@
+A set Abstract Data Type (ADT)  is a collection of unique elements with no 
+specific order. It allows efficient membership testing and operations 
+such as adding, removing, and checking for the presence of elements.
+
+Here's a description of the set ADT along with 
+its necessary and auxiliary functions:
+
+
+Set ADT:
+
+1. The set ADT stores elements in no specific order. 
+
+2. A set contains only unique elements. No duplicates are allowed.
+
+
+
+Functions:
+
+Set initialize(); // Returns an empty set
+
+void insert(Set* s, int elem); // Inserts element at the top of the stack
+
+void destroy(Set* s, int elem); // Removes given element from the set if present
+
+int member(Set s); // Returns 1 if element is in the set, 0 otherwise
+
+Set unite(Set s1, Set s2); // returns the union of set 1 and 2
+
+Set intersect(Set s1, Set s2); // Returns the intersection of set 1 and 2
+
+Set difference(Set s1, Set s2); // Returns the difference of set 1 and 2
+
+----- Optional -----
+
+Set complement(Set s); // Returns the complement of a given set
+
+void display(Set s); // Displays the elements of the set
