@@ -1,0 +1,38 @@
+A dictionary Abstract Data Type (ADT) is a data structure that stores a 
+collection of key-value pairs. It provides efficient retrieval of 
+values based on their corresponding keys.
+
+Here's a description of the dictionary ADT along with 
+its necessary and auxiliary functions:
+
+
+Dictionary ADT:
+
+1. The dictionary ADT stores elements as key-value pairs, where each key is 
+associated with a value.
+
+2. Elements can be inserted, updated, or removed based on their keys.
+
+3. Keys in the dictionary must be unique.
+
+
+
+Functions:
+
+Dictionary* initialize(); // Returns an empty dictionary
+
+void insert(Dictionary* d, int key); // Inserts a key into the dictionary
+
+void destroy(Dictionary* d, int key); // Removes a key from the dictionary 
+
+int member(Dictionary d, int key); // Returns 1 if the dictionary contains the specified key, 0 otherwise
+
+int isFull(Dictionary d); // Returns 1 if the dictionary is empty, 0 otherwise [Cursor]
+
+int hash(int key); // Converts the given key into an indexable value in the dictionary
+
+----- Optional -----
+
+int size(Dictionary d); // Returns the number of keys in the dictionary
+
+void display(Dictionary d); // Displays the keys of the dictionary
