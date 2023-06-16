@@ -1,5 +1,6 @@
 /*
-Dictionary is a structure containing an array of pointers to linked list nodes
+Dictionary is a structure containing an array of pointers to heap nodes
+and a pointer to the virtual heap
 Note: each pointer points to the address of the first node in the list,
       NULL if there are no nodes in the list
 */
@@ -23,9 +24,10 @@ typedef struct {
          // of nodes and an integer pointing to the next available index
 
 typedef struct {
-    int bucket[SIZE];
+    dictNode bucket[SIZE];
     VHeap *heapPtr;
-} Dictionary;
+} Dictionary; // Dictionary is a structure containing an array of cursor nodes
+              // and a pointer to the virtual heap
 
 VHeap initializeVHeap(); // Returns a newly initialized virtual heap with linked nodes
 Dictionary initializeDict(VHeap* vh); // Returns an empty dictionary
