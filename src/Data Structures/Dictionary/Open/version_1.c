@@ -7,7 +7,7 @@ Note: each pointer points to the address of the first node in the list,
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 4
+#define SIZE 10
 
 typedef struct node {
     int data;
@@ -80,11 +80,11 @@ int main() {
 }
 
 Dictionary initialize() {
-    Dictionary newDict = (Dictionary) malloc(sizeof(node)*MAX);
+    Dictionary newDict = (Dictionary) malloc(sizeof(node) * SIZE);
 
     int temp;
 
-    for (temp=0 ; temp<MAX; temp++) {
+    for (temp=0 ; temp<SIZE; temp++) {
         newDict[temp] = NULL;
     }
 
@@ -137,7 +137,7 @@ int size(Dictionary d) {
     int size = 0, temp;
     node trav;
 
-    for (temp=0 ; temp<MAX ; temp++) {
+    for (temp=0 ; temp<SIZE ; temp++) {
         for (trav=d[temp] ; trav!=NULL ; trav=trav->next) {
             size++;
         }
@@ -150,7 +150,7 @@ void display(Dictionary d) {
     int temp;
     node trav;
 
-    for (temp=0 ; temp<MAX ; temp++) {
+    for (temp=0 ; temp<SIZE ; temp++) {
         printf("Group %d: ", temp);
 
         for (trav=d[temp] ; trav!=NULL ; trav=trav->next) {
@@ -162,5 +162,5 @@ void display(Dictionary d) {
 }
 
 int hash(int key) {
-    return key % MAX;
+    return key % SIZE;
 }
